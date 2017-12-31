@@ -1,6 +1,6 @@
-/* Vista splash */
 $(document).ready(function() {
+  /* Vista splash */
   setTimeout(function() {
-    $('#splash').fadeOut(300);
+    window.location.href = 'views/register.html';
   }, 3000);
 });
