@@ -17,19 +17,15 @@
   </div>
   <form class="container-flex-column text-center">
     <h1 class="title">Sing up</h1>
-    <div class="form-group">
-      <div class="input-group-addon">
-        <i class="fa fa-user-o" aria-hidden="true"></i>
-      </div>      
-      <input type="text" class="form-control" id="inputFirstName" placeholder="Carmen">
+    <p>Join now for free ride credit</p>
+    <hr>
+    <div class="input-group">
+      <i class="fa fa-user-o input-group-addon fa-inline" aria-hidden="true"></i>
+      <input type="text" class="form-control" id="inputFirstName" placeholder="Carmen" aria-describedby="basic-addon1">
+      <input type="text" class="form-control" id="inputLastName" placeholder="Ramirez" aria-describedby="basic-addon1">
     </div>
-    <div class="form-group">
-      <input type="text" class="form-control" id="inputLastName" placeholder="Ramirez">
-    </div>
-    <div class="form-group">
-      <div class="input-group-addon">
-        <i class="fa fa-envelope-o" aria-hidden="true"></i>
-      </div>    
+    <div class="input-group">
+      <i class="fa fa-envelope-o input-group-addon fa-inline" aria-hidden="true"></i>
       <input type="email" class="form-control" id="inputEmail" placeholder="cramirez@gmail.com">
     </div>
     <div class="checkbox">
@@ -38,11 +34,11 @@
       </label>
     </div>
 
-    <button type="submit" id="signup" class="btn btn-sucess" disabled>Next</button>
+    <button type="submit" id="signup" class="btn btn-sucess" disabled>NEXT</button>
   </form>
 
   <script src="../vendors/js/jquery-3.2.1.min.js"></script>
-  <script src="../vendors/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../vendors/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
   <script src="../js/signup.js"></script>
 </body>
 </html>

@@ -83,10 +83,19 @@ body {
   background-color: transparent;
 }
 
+#inputFirstName, #inputLastName {
+  margin-bottom: 1em;
+  width: 50%;
+}
+
 .mobile-input {
   display: inline-block;
   border: none;
   border-bottom: 1px solid #a9a2a6;
+}
+
+.fa-inline {
+  display: none;
 }
 
 .next {
