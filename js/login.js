@@ -1,40 +1,29 @@
 $(document).ready(function() {
-  var $email = $('#inputEmail');
-  var $password = $('#inputPassword');
-  var $buttonSubmit = $('button[type="submit"]');
+  var mobile = $('.mobile-input');
+  var next = $('.next');
+  var maxDigits = 10;
 
-  // variable booleanas para la activación del boton  
-  var validateEmail = false;
-  var validatePassword = false; 
-
-  // llamamos a los valores guardados en el localStorage
-  console.log(localStorage.email);
-  console.log(localStorage.password);
-
- 
-  $email.on('input', function() {
-    if ($(this).val() === localStorage.email) {
-      // alert('pasa');
-      validateEmail = true;
-    }
+  /* Función de validación de sólo números*/
+  mobile.on('input', function() {
+    this.value = (this.value + '').replace(/[^0-9]/g, '');
   });
 
-  $password.on('input', function() {
-    if ($(this).val() === localStorage.password) {
-      // alert('esto tambien pasa');
-      validatePassword = true;
-    }
-  });
-
-
-  $buttonSubmit.on('click', function(event) {
-    event.preventDefault();
-    if (validateEmail && validatePassword) {
-      alert('Oh my gad!! You are papanuelll Yupi!!');
-      window.location.href = 'close.html';
+  /* Función validación cantidad de caracteres*/ 
+  mobile.keyup(function() {
+    if ($(this).val().length === maxDigits) {
+      next.attr('disabled', false);
     } else {
-      alert('Oh no, you need register');
+      next.attr('disabled', true);
     }
-   
+  });
+
+  /* Probando código aleatorio */ 
+  next.on('click', function(event) {
+    event.preventDefault();
+    var numberRandom = Math.floor(Math.random() * 600);
+    var codeRandom = 'LAB-' + numberRandom;
+    alert('Tu código: ' + codeRandom);
+    localStorage.labCode = numberRandom;
+    window.location.href = 'verifycode.html';
   });
 });
